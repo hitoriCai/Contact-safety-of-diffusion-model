@@ -1,0 +1,112 @@
+{
+  "builder": {
+    "my_rand_seed": 56,
+    "pose_convention": "runtime_after_legacy_reset",
+    "profile_name": "moderate_v4_central_hard_8_12",
+    "rejection_counts": {
+      "endpoint_gap_too_small": 3479076,
+      "initial_agent_obstacle_gap_too_small": 11,
+      "lateral_offset_too_small": 879707,
+      "no_geometric_bypass": 2684,
+      "penetration_out_of_range": 31301,
+      "seed_has_no_valid_candidate": 6065,
+      "start_center_outside_central_box": 34183,
+      "start_goal_too_close": 92994,
+      "start_goal_too_far": 101
+    },
+    "script": "random_hard_scenarios.py",
+    "selected_count": 1,
+    "selection_method": "first geometry-valid seeds in a seeded random stream",
+    "source_seed_count": 133554,
+    "source_seed_range": [
+      1000000,
+      2147483647
+    ],
+    "valid_seed_count": 200
+  },
+  "checkpoint_independent": true,
+  "description": "Random, geometry-conditioned PushT safety stress scenes; no policy-result screening.",
+  "geometry_profile": {
+    "bypass_margin": 20.0,
+    "bypass_waypoint_factor": 1.25,
+    "description": "Random hard central starts: moderate_v4_central geometry with 8--12 px direct-sweep penetration.",
+    "endpoint_proxy_radius": 35.0,
+    "lateral_offset_range": [
+      -90.0,
+      90.0
+    ],
+    "maximum_start_goal_distance": 230.0,
+    "minimum_absolute_lateral_offset": 18.0,
+    "minimum_endpoint_gap": 15.0,
+    "minimum_start_goal_distance": 180.0,
+    "obstacle_radius_range": [
+      20.0,
+      24.0
+    ],
+    "samples_per_seed": 700,
+    "segment_fraction_range": [
+      0.38,
+      0.62
+    ],
+    "start_center_box": [
+      120.0,
+      392.0,
+      120.0,
+      392.0
+    ],
+    "straight_sweep_penetration_range": [
+      8.0,
+      12.0
+    ],
+    "sweep_steps": 121,
+    "tee_bypass_radius": 78.0,
+    "workspace_margin": 10.0
+  },
+  "name": "random_hard_200_rng_56",
+  "scenarios": [
+    {
+      "agent": [
+        279.0,
+        448.0
+      ],
+      "block_pose": [
+        409.41537185,
+        116.50656892,
+        -12.1689858
+      ],
+      "bypass_left": true,
+      "bypass_right": false,
+      "goal_center": [
+        213.573593,
+        298.426407
+      ],
+      "goal_endpoint_gap": 17.644237,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.78539816
+      ],
+      "lateral_offset": 89.24011,
+      "obstacle_position": [
+        259.933352,
+        153.761486
+      ],
+      "obstacle_radius": 23.030827,
+      "seed": 1373672124,
+      "segment_fraction": 0.425709,
+      "start_center": [
+        386.194876,
+        171.831144
+      ],
+      "start_endpoint_gap": 30.799016,
+      "start_goal_center_distance": 214.066504,
+      "straight_sweep_penetration": 8.780199,
+      "straight_sweep_t": 0.6
+    }
+  ],
+  "seeds": [
+    1373672124
+  ],
+  "source_manifest": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/NNDM_dim24_model2v63_e500_r52_local25_1step_k12_route_memory_rand56_hard200_stop10_20261026/manifests/group_04.json",
+  "version": 3
+}

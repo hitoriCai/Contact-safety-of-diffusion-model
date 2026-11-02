@@ -1,0 +1,1525 @@
+{
+  "created_at": "2026-11-02T11:55:57.425613+00:00",
+  "project_root": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964",
+  "experiment": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束",
+  "entry": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_mixed_stages/eval.py",
+  "total_source_files": 138,
+  "counts": {
+    "project_code": 62,
+    "batch_launcher": 1,
+    "checkpoint": 3,
+    "scenario_manifest": 66,
+    "installation_metadata": 1,
+    "frozen_run_config": 1,
+    "provenance": 2,
+    "result_summary": 2
+  },
+  "bytes_by_category": {
+    "project_code": 532052,
+    "batch_launcher": 2578,
+    "checkpoint": 2107053653,
+    "scenario_manifest": 197696,
+    "installation_metadata": 113,
+    "frozen_run_config": 360566,
+    "provenance": 15233,
+    "result_summary": 29444
+  },
+  "total_bytes": 2108191335,
+  "code_hashes_match_frozen_run": true,
+  "checkpoints_match_frozen_run": true,
+  "scope": "Evaluation reproduction source inventory; no training datasets or videos.",
+  "import_audit": "Entry imported without running __main__; checkpoint configs loaded on CPU; recursive AST import closure.",
+  "externally_resolved_project_modules": [],
+  "unresolved_project_imports": [],
+  "code_and_checkpoints_only_count": 67,
+  "files": [
+    {
+      "category": "batch_launcher",
+      "source": "/tmp/run66_r57r59_reuse10_20261031.py",
+      "repository_path": "scripts/run66_r57r59_reuse10_20261031.py",
+      "bytes": 2578,
+      "sha256": "06cbd978d71b47dd16839b1a70b33f39400bef3e6e80a24f857336f7e03fce8b",
+      "reasons": [
+        "actual56-scene batch launcher; ten outputs reused"
+      ]
+    },
+    {
+      "category": "checkpoint",
+      "role": "model1",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/outputs/2026.09.27/model1_film200_action4_e600/checkpoints/last/epoch=0600.ckpt",
+      "repository_path": "checkpoints/model1_epoch0600.ckpt",
+      "bytes": 1052821633,
+      "sha256": "3e24bde4a8c335cfcabbf05ea68eda36024694c0ae17bed505196cae43f77d45",
+      "reasons": [
+        "frozen experiment command --checkpoint"
+      ]
+    },
+    {
+      "category": "checkpoint",
+      "role": "model2_v6_3_epoch500",
+      "source": "/home/cps/czt/2026_summer/model2_training_comparison_20261019/model2_v6_3_vanilla_seed43_20261019/runs/seed43/vanilla/checkpoints/epoch0500.ckpt",
+      "repository_path": "checkpoints/model2_v6_3_epoch0500.ckpt",
+      "bytes": 1054199229,
+      "sha256": "58cfea812ecbb65bd99947531bfab21cb61e4417cd323eb997912a7b54ec7b42",
+      "reasons": [
+        "frozen experiment command --regrasp_model2_checkpoint"
+      ]
+    },
+    {
+      "category": "checkpoint",
+      "role": "NNDM_dim24",
+      "source": "/home/cps/czt/2026_summer/nndm_combined370_20261025/full/nndm_24d_original206_plus_model2v62_370.pth",
+      "repository_path": "checkpoints/nndm_dim24.pth",
+      "bytes": 32791,
+      "sha256": "29d71e23a758f40747ea7dc2674c767df925491de95490199c6ae463b7a18782",
+      "reasons": [
+        "frozen experiment command --mind_checkpoint"
+      ]
+    },
+    {
+      "category": "frozen_run_config",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/experiment_config.json",
+      "repository_path": "experiment/experiment_config.json",
+      "bytes": 360566,
+      "sha256": "77e7de50783dbb702fab6d36de09c2beae816b36cb2bce937f32dd80e4365622",
+      "reasons": [
+        "frozen_run_config"
+      ]
+    },
+    {
+      "category": "installation_metadata",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/setup.py",
+      "repository_path": "setup.py",
+      "bytes": 113,
+      "sha256": "d6d2a5820f236940c1566d2117d84c556e008475542ea0e4a0bb0b650c14fb2d",
+      "reasons": [
+        "installation_metadata"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/common/json_logger.py",
+      "repository_path": "diffusion_policy/common/json_logger.py",
+      "bytes": 3733,
+      "sha256": "0678a15375ec22d85bf2deb499c1c3369aae885f35e214a884bf6bac7655d9ff",
+      "reasons": [
+        "imported by diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+        "observed dynamic import: diffusion_policy.common.json_logger"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/common/pytorch_util.py",
+      "repository_path": "diffusion_policy/common/pytorch_util.py",
+      "bytes": 2713,
+      "sha256": "96ce50e191b4c837532529040af65d2b9a1f433f33a5187f8cf256b62d84b6b4",
+      "reasons": [
+        "imported by diffusion_policy/model/common/normalizer.py",
+        "imported by diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: diffusion_policy.common.pytorch_util"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/common/timestamp_accumulator.py",
+      "repository_path": "diffusion_policy/common/timestamp_accumulator.py",
+      "bytes": 7781,
+      "sha256": "16f32c9e626debca2c495e859152e6fee4166732c5cb8b8923f4399854fcb6e9",
+      "reasons": [
+        "imported by diffusion_policy/real_world/video_recorder.py",
+        "observed dynamic import: diffusion_policy.common.timestamp_accumulator"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/dataset/base_dataset.py",
+      "repository_path": "diffusion_policy/dataset/base_dataset.py",
+      "bytes": 1384,
+      "sha256": "d2ad33b5af14a3a3ad9995701dd44790170c84b394a7bad899d607d809cbe8e3",
+      "reasons": [
+        "imported by diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+        "observed dynamic import: diffusion_policy.dataset.base_dataset"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/env/pusht/__init__.py",
+      "repository_path": "diffusion_policy/env/pusht/__init__.py",
+      "bytes": 238,
+      "sha256": "3047be4b156d8fa96834db16ca29853271cc641216a0b0051f7e67669f15a685",
+      "reasons": [
+        "imported by diffusion_policy/env/pusht/__init__.py",
+        "observed dynamic import: diffusion_policy.env.pusht"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/env/pusht/pusht_env.py",
+      "repository_path": "diffusion_policy/env/pusht/pusht_env.py",
+      "bytes": 26404,
+      "sha256": "c6c999393eedb9c7196236c827b8b9614de404f3f8fd5df5c3a8dc020a154d74",
+      "reasons": [
+        "imported by diffusion_policy/env/pusht/pusht_keypoints_env.py",
+        "observed dynamic import: diffusion_policy.env.pusht.pusht_env"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/env/pusht/pusht_keypoints_env.py",
+      "repository_path": "diffusion_policy/env/pusht/pusht_keypoints_env.py",
+      "bytes": 19191,
+      "sha256": "46114238dbedf25c28111a8db4600ec32a3119555fded45e1982adc2b9cd9cf4",
+      "reasons": [
+        "imported by experiments/contact_gap_5s/contact_env.py",
+        "observed dynamic import: diffusion_policy.env.pusht.pusht_keypoints_env"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/env/pusht/pymunk_keypoint_manager.py",
+      "repository_path": "diffusion_policy/env/pusht/pymunk_keypoint_manager.py",
+      "bytes": 5236,
+      "sha256": "26cb951d046992906ca55d7a89a44022d930be5ec4ea8fd56db889f9d6e12275",
+      "reasons": [
+        "imported by diffusion_policy/env/pusht/pusht_keypoints_env.py",
+        "observed dynamic import: diffusion_policy.env.pusht.pymunk_keypoint_manager"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/env/pusht/pymunk_override.py",
+      "repository_path": "diffusion_policy/env/pusht/pymunk_override.py",
+      "bytes": 8415,
+      "sha256": "85e7c54b5e9630a9f7e675250ee514ae9b2249d11654ec0811d8e4bcf413fe39",
+      "reasons": [
+        "imported by diffusion_policy/env/pusht/pusht_env.py",
+        "imported by diffusion_policy/env/pusht/pymunk_keypoint_manager.py",
+        "observed dynamic import: diffusion_policy.env.pusht.pymunk_override"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/env_runner/base_lowdim_runner.py",
+      "repository_path": "diffusion_policy/env_runner/base_lowdim_runner.py",
+      "bytes": 284,
+      "sha256": "f24ea57e14c7084f027ced8e0fa7d835fcf56db2ea05738f61d3efb30d0e73a8",
+      "reasons": [
+        "imported by diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: diffusion_policy.env_runner.base_lowdim_runner"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/gym_util/async_vector_env.py",
+      "repository_path": "diffusion_policy/gym_util/async_vector_env.py",
+      "bytes": 25582,
+      "sha256": "b9ba8353fe6a187a4c254184e08a22a461b3086a2da60035d2c07422184853c6",
+      "reasons": [
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: diffusion_policy.gym_util.async_vector_env"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/gym_util/multistep_wrapper.py",
+      "repository_path": "diffusion_policy/gym_util/multistep_wrapper.py",
+      "bytes": 4980,
+      "sha256": "2923e73c13ff9f782451ab61bed43a802670bbf29419471f82878c690f26a342",
+      "reasons": [
+        "imported by experiments/contact_gap_5s/contact_wrapper.py",
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: diffusion_policy.gym_util.multistep_wrapper"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/gym_util/video_recording_wrapper.py",
+      "repository_path": "diffusion_policy/gym_util/video_recording_wrapper.py",
+      "bytes": 1539,
+      "sha256": "415cbf6055c897eac1db89e9a0a2c9c2c5885bcc4b291543094e389adc029cb1",
+      "reasons": [
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: diffusion_policy.gym_util.video_recording_wrapper"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/common/dict_of_tensor_mixin.py",
+      "repository_path": "diffusion_policy/model/common/dict_of_tensor_mixin.py",
+      "bytes": 1369,
+      "sha256": "158b63a244bcfb9aa377206730f5f59778c6aeb9138ff55c76d2c28ec46952d1",
+      "reasons": [
+        "imported by diffusion_policy/model/common/normalizer.py",
+        "observed dynamic import: diffusion_policy.model.common.dict_of_tensor_mixin"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/common/lr_scheduler.py",
+      "repository_path": "diffusion_policy/model/common/lr_scheduler.py",
+      "bytes": 1968,
+      "sha256": "feb9453856bfd1ee10b1faba6c64814e071c5e70174398daf3bfcd8d430c80db",
+      "reasons": [
+        "imported by diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+        "observed dynamic import: diffusion_policy.model.common.lr_scheduler"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/common/module_attr_mixin.py",
+      "repository_path": "diffusion_policy/model/common/module_attr_mixin.py",
+      "bytes": 334,
+      "sha256": "658dececa20f7628960fc1a8db89e4be3693e1bba47f63d1ff8a4faa2d481e45",
+      "reasons": [
+        "imported by diffusion_policy/model/diffusion/mask_generator.py",
+        "imported by diffusion_policy/policy/base_lowdim_policy.py",
+        "observed dynamic import: diffusion_policy.model.common.module_attr_mixin"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/common/normalizer.py",
+      "repository_path": "diffusion_policy/model/common/normalizer.py",
+      "bytes": 11901,
+      "sha256": "92322852fc04d956d0dd43a2e41fb461dee246bbf97ddc7940186a9307525ed3",
+      "reasons": [
+        "imported by diffusion_policy/dataset/base_dataset.py",
+        "imported by diffusion_policy/policy/base_lowdim_policy.py",
+        "imported by diffusion_policy/policy/diffusion_unet_lowdim_policy.py",
+        "observed dynamic import: diffusion_policy.model.common.normalizer"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/diffusion/conditional_unet1d.py",
+      "repository_path": "diffusion_policy/model/diffusion/conditional_unet1d.py",
+      "bytes": 8952,
+      "sha256": "8a95014f8aa52ade086f967c9018a66bf0c68f2133969c8f7a8522da01b472ac",
+      "reasons": [
+        "imported by diffusion_policy/policy/diffusion_unet_lowdim_policy.py",
+        "imported by model1 checkpoint dynamic target policy.model",
+        "imported by model2_v6_3_epoch500 checkpoint dynamic target policy.model",
+        "observed dynamic import: diffusion_policy.model.diffusion.conditional_unet1d"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/diffusion/conv1d_components.py",
+      "repository_path": "diffusion_policy/model/diffusion/conv1d_components.py",
+      "bytes": 1223,
+      "sha256": "ea2aa10e297cf253bc1a1919ba47fe6ae32049b5eaaab292ed9cc145d8d2adc0",
+      "reasons": [
+        "imported by diffusion_policy/model/diffusion/conditional_unet1d.py",
+        "observed dynamic import: diffusion_policy.model.diffusion.conv1d_components"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/diffusion/mask_generator.py",
+      "repository_path": "diffusion_policy/model/diffusion/mask_generator.py",
+      "bytes": 7916,
+      "sha256": "23dba4c112ed57e41d530612c79d9841c9b3c5bd3d6790863d1739190a9ab7b0",
+      "reasons": [
+        "imported by diffusion_policy/policy/diffusion_unet_lowdim_policy.py",
+        "observed dynamic import: diffusion_policy.model.diffusion.mask_generator"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/model/diffusion/positional_embedding.py",
+      "repository_path": "diffusion_policy/model/diffusion/positional_embedding.py",
+      "bytes": 480,
+      "sha256": "2266c75ecc9c9ac8ca126839d39a7bafbdd7af8800d6de903f66815e64cc366c",
+      "reasons": [
+        "imported by diffusion_policy/model/diffusion/conditional_unet1d.py",
+        "observed dynamic import: diffusion_policy.model.diffusion.positional_embedding"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/policy/base_lowdim_policy.py",
+      "repository_path": "diffusion_policy/policy/base_lowdim_policy.py",
+      "bytes": 1029,
+      "sha256": "e44a526a148d67b29f06f1695c0705ed371fefd38893bd20d7aadf37dfa8e02b",
+      "reasons": [
+        "imported by diffusion_policy/env_runner/base_lowdim_runner.py",
+        "imported by diffusion_policy/policy/diffusion_unet_lowdim_policy.py",
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: diffusion_policy.policy.base_lowdim_policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/policy/diffusion_unet_lowdim_policy.py",
+      "repository_path": "diffusion_policy/policy/diffusion_unet_lowdim_policy.py",
+      "bytes": 20816,
+      "sha256": "b1ef8340a6f764412ad4d615bcaea44e4bf888f6eb08dfe8cad42fdfe6449209",
+      "reasons": [
+        "imported by diffusion_policy/policy/diffusion_unet_lowdim_policy_origin.py",
+        "imported by diffusion_policy/policy/diffusion_unet_lowdim_policy_regrasp.py",
+        "imported by diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+        "observed dynamic import: diffusion_policy.policy.diffusion_unet_lowdim_policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/policy/diffusion_unet_lowdim_policy_origin.py",
+      "repository_path": "diffusion_policy/policy/diffusion_unet_lowdim_policy_origin.py",
+      "bytes": 1189,
+      "sha256": "54d170e98c220dbf9be95ab4bdbdef8a67c6e89e43c9eb1c7aa4dc95c84d58ea",
+      "reasons": [
+        "imported by model1 checkpoint dynamic target policy",
+        "imported by model2_v6_3_epoch500 checkpoint dynamic target policy",
+        "observed dynamic import: diffusion_policy.policy.diffusion_unet_lowdim_policy_origin"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/policy/diffusion_unet_lowdim_policy_regrasp.py",
+      "repository_path": "diffusion_policy/policy/diffusion_unet_lowdim_policy_regrasp.py",
+      "bytes": 25029,
+      "sha256": "c84588b114ded6919cbd1738f5ddc27f53e1fdfea50a286ecdc9810b219ccac9",
+      "reasons": [
+        "imported by experiments/contact_gap_5s/policy_contact_gap.py",
+        "observed dynamic import: diffusion_policy.policy.diffusion_unet_lowdim_policy_regrasp"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/policy/mind.py",
+      "repository_path": "diffusion_policy/policy/mind.py",
+      "bytes": 92946,
+      "sha256": "cd7c275059da94c29094fcb9c433ba5030272c1907bd81e39d171a6f339b7719",
+      "reasons": [
+        "imported by diffusion_policy/policy/diffusion_unet_lowdim_policy.py",
+        "imported by experiments/contact_gap_5s/policy_contact_gap.py",
+        "imported by experiments/model2_cbf_full_page/filter.py",
+        "imported by experiments/model2_cbf_global_then_clip/filter.py",
+        "observed dynamic import: diffusion_policy.policy.mind"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/real_world/video_recorder.py",
+      "repository_path": "diffusion_policy/real_world/video_recorder.py",
+      "bytes": 4028,
+      "sha256": "e042ba2cf758440f841751ed80c0bb76ecd6d596eaabc9907948055f6b8bb7b4",
+      "reasons": [
+        "imported by diffusion_policy/gym_util/video_recording_wrapper.py",
+        "observed dynamic import: diffusion_policy.real_world.video_recorder"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/workspace/base_workspace.py",
+      "repository_path": "diffusion_policy/workspace/base_workspace.py",
+      "bytes": 4961,
+      "sha256": "388b531260f2e0f91fc6bd2bdc90abd99367e9b7f7744f0010112ecc78d6c1e0",
+      "reasons": [
+        "imported by diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+        "imported by eval.py",
+        "observed dynamic import: diffusion_policy.workspace.base_workspace"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+      "repository_path": "diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py",
+      "bytes": 17275,
+      "sha256": "aa582815dade742c979d8aeb29a93358381fa534fa057e260363c1ec71108074",
+      "reasons": [
+        "imported by model1 checkpoint dynamic target workspace",
+        "observed dynamic import: diffusion_policy.workspace.train_diffusion_unet_lowdim_workspace"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/eval.py",
+      "repository_path": "eval.py",
+      "bytes": 24466,
+      "sha256": "1e135fb5c694d0e0031507a9e6c20b0312dc8511a0cbe0cdae8edfddb09cb636",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: eval"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/__init__.py",
+      "repository_path": "experiments/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reasons": [
+        "observed dynamic import: experiments",
+        "package initializer"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/contact_gap_5s/__init__.py",
+      "repository_path": "experiments/contact_gap_5s/__init__.py",
+      "bytes": 63,
+      "sha256": "a6bb61449b5c064f38bb0bd76db126438d8545b05f2fb3d801bfb5e429de2ca0",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.contact_gap_5s"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/contact_gap_5s/contact_env.py",
+      "repository_path": "experiments/contact_gap_5s/contact_env.py",
+      "bytes": 769,
+      "sha256": "123bfd9b02cb67ea4fccf705fbf1db18d8288852eac41dc75686bc9bac6ef259",
+      "reasons": [
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: experiments.contact_gap_5s.contact_env"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/contact_gap_5s/contact_wrapper.py",
+      "repository_path": "experiments/contact_gap_5s/contact_wrapper.py",
+      "bytes": 670,
+      "sha256": "4ce1a9e2a716aad0376305f37bb1a3ef00a0adbc01c1b54cde1e447d3c5308f7",
+      "reasons": [
+        "imported by experiments/contact_gap_5s/runner_contact_gap.py",
+        "imported by experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+        "observed dynamic import: experiments.contact_gap_5s.contact_wrapper"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/contact_gap_5s/policy_contact_gap.py",
+      "repository_path": "experiments/contact_gap_5s/policy_contact_gap.py",
+      "bytes": 35914,
+      "sha256": "9b5d959123e8a6a57ed71f63e67692b42f6cba8c936c64519caa3d372d2571b3",
+      "reasons": [
+        "imported by experiments/model2_cbf_diverse_v2/policy.py",
+        "observed dynamic import: experiments.contact_gap_5s.policy_contact_gap"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/contact_gap_5s/runner_contact_gap.py",
+      "repository_path": "experiments/contact_gap_5s/runner_contact_gap.py",
+      "bytes": 30963,
+      "sha256": "acc0f83110776f529149144d95157636cbeaed2a3d3ae10a3f23bee07ad45b78",
+      "reasons": [
+        "imported by experiments/model2_cbf_diverse_v2/runner.py",
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.contact_gap_5s.runner_contact_gap"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_diverse_hard/policy.py",
+      "repository_path": "experiments/model2_cbf_diverse_hard/policy.py",
+      "bytes": 1710,
+      "sha256": "a1882bc1b1c3e22cd2a2309824f27d2890e433b0b55063bdeb38b2138c20436e",
+      "reasons": [
+        "imported by experiments/model2_cbf_diverse_hard_infeasible_regrasp/policy.py",
+        "observed dynamic import: experiments.model2_cbf_diverse_hard.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_diverse_hard_infeasible_regrasp/__init__.py",
+      "repository_path": "experiments/model2_cbf_diverse_hard_infeasible_regrasp/__init__.py",
+      "bytes": 75,
+      "sha256": "b5f2719c164153b9ac530e92252e4dcf0c1149e3474892cffa2ac66cfe6ac850",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.model2_cbf_diverse_hard_infeasible_regrasp"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_diverse_hard_infeasible_regrasp/policy.py",
+      "repository_path": "experiments/model2_cbf_diverse_hard_infeasible_regrasp/policy.py",
+      "bytes": 7473,
+      "sha256": "2f5223f2cdb2264338ce95f161d3dda91ab31f919587f39bbe23b42d91ed55d6",
+      "reasons": [
+        "imported by experiments/model2_cbf_global_then_clip/policy.py",
+        "observed dynamic import: experiments.model2_cbf_diverse_hard_infeasible_regrasp.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_diverse_hard_infeasible_regrasp/runner.py",
+      "repository_path": "experiments/model2_cbf_diverse_hard_infeasible_regrasp/runner.py",
+      "bytes": 752,
+      "sha256": "2aefe93bc79a73ed58ec6cc3171a4ac8cc50c11d74397dc1298ab9be7be890ff",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "imported by experiments/model2_cbf_local25_route_memory/runner.py",
+        "observed dynamic import: experiments.model2_cbf_diverse_hard_infeasible_regrasp.runner"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_diverse_v2/policy.py",
+      "repository_path": "experiments/model2_cbf_diverse_v2/policy.py",
+      "bytes": 11577,
+      "sha256": "3201d43041e95852817b08af11fe292834b585ab808664175def1bc130e655d5",
+      "reasons": [
+        "imported by experiments/model2_cbf_diverse_hard/policy.py",
+        "observed dynamic import: experiments.model2_cbf_diverse_v2.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_diverse_v2/runner.py",
+      "repository_path": "experiments/model2_cbf_diverse_v2/runner.py",
+      "bytes": 668,
+      "sha256": "eb46f59a1cb7598286c95ffdc9a9cef8e3554dde07700afcf6730e44d22dc2a8",
+      "reasons": [
+        "imported by experiments/model2_cbf_diverse_hard_infeasible_regrasp/runner.py",
+        "observed dynamic import: experiments.model2_cbf_diverse_v2.runner"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_full_page/__init__.py",
+      "repository_path": "experiments/model2_cbf_full_page/__init__.py",
+      "bytes": 69,
+      "sha256": "25ea9e5c3d4d7f255d9b2acddf020c1fefabc15b36261027346ff67fe72af3f6",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.model2_cbf_full_page"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_full_page/filter.py",
+      "repository_path": "experiments/model2_cbf_full_page/filter.py",
+      "bytes": 6665,
+      "sha256": "3ade4aa51890508bf900098bc7643c0149488abf2e04d49017277c718acec5cc",
+      "reasons": [
+        "imported by experiments/model2_cbf_full_page/policy.py",
+        "imported by experiments/model2_cbf_full_page_1step_p047/policy.py",
+        "imported by experiments/model2_cbf_local25_dedup/policy.py",
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.model2_cbf_full_page.filter"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_full_page/policy.py",
+      "repository_path": "experiments/model2_cbf_full_page/policy.py",
+      "bytes": 1387,
+      "sha256": "6a57d7c0a46339e19e37e43dfb703f799ef081fe1686e254b09ef5f947ca68d4",
+      "reasons": [
+        "imported by experiments/model2_cbf_full_page_1step_p047/policy.py",
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.model2_cbf_full_page.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_full_page_1step_p047/__init__.py",
+      "repository_path": "experiments/model2_cbf_full_page_1step_p047/__init__.py",
+      "bytes": 76,
+      "sha256": "2bb7e4d7115e6b82f7d848546b14b569d720aeed3b74e5a72e1ce7692932ad66",
+      "reasons": [
+        "observed dynamic import: experiments.model2_cbf_full_page_1step_p047"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_full_page_1step_p047/policy.py",
+      "repository_path": "experiments/model2_cbf_full_page_1step_p047/policy.py",
+      "bytes": 3961,
+      "sha256": "7b3e8d5880684e793113273075f3c4350b67aa598ee4c4b8948faa29bec8efda",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_dedup/policy.py",
+        "imported by experiments/model2_cbf_local25_route_memory/policy.py",
+        "observed dynamic import: experiments.model2_cbf_full_page_1step_p047.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_global_then_clip/__init__.py",
+      "repository_path": "experiments/model2_cbf_global_then_clip/__init__.py",
+      "bytes": 67,
+      "sha256": "b100ae10e76ae86eabb9a631b1d96a73f6a845310271be2150d354f08fa34f6b",
+      "reasons": [
+        "imported by experiments/model2_cbf_full_page/filter.py",
+        "observed dynamic import: experiments.model2_cbf_global_then_clip"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_global_then_clip/filter.py",
+      "repository_path": "experiments/model2_cbf_global_then_clip/filter.py",
+      "bytes": 7020,
+      "sha256": "fb491382a798db1ecbf007a6b2d8e02a8e355e0736c6d85e906a84a3d2888c3e",
+      "reasons": [
+        "imported by experiments/model2_cbf_full_page/filter.py",
+        "observed dynamic import: experiments.model2_cbf_global_then_clip.filter"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_global_then_clip/policy.py",
+      "repository_path": "experiments/model2_cbf_global_then_clip/policy.py",
+      "bytes": 590,
+      "sha256": "48817432a2bfbfaddb3b36e215cf482a316137c15062418387ddbf1d2988edb9",
+      "reasons": [
+        "imported by experiments/model2_cbf_full_page/policy.py",
+        "observed dynamic import: experiments.model2_cbf_global_then_clip.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_dedup/__init__.py",
+      "repository_path": "experiments/model2_cbf_local25_dedup/__init__.py",
+      "bytes": 80,
+      "sha256": "8f5f5b9638747c385d30b6314915bc0570a508680ce1abb2916adcd57499b370",
+      "reasons": [
+        "observed dynamic import: experiments.model2_cbf_local25_dedup"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_dedup/policy.py",
+      "repository_path": "experiments/model2_cbf_local25_dedup/policy.py",
+      "bytes": 10304,
+      "sha256": "24b76f804d2ecd6a75801fd6ef6efde8b38f991b47d21b1d94792b24b80a520e",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_route_memory/policy.py",
+        "observed dynamic import: experiments.model2_cbf_local25_dedup.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_mixed_stages/__init__.py",
+      "repository_path": "experiments/model2_cbf_local25_mixed_stages/__init__.py",
+      "bytes": 70,
+      "sha256": "70ea2fa8f58510aec3dddcddfa2ef4a54df5d815bd7c65372ad6efef5c50b885",
+      "reasons": [
+        "observed dynamic import: experiments.model2_cbf_local25_mixed_stages",
+        "package initializer"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_mixed_stages/eval.py",
+      "repository_path": "experiments/model2_cbf_local25_mixed_stages/eval.py",
+      "bytes": 1896,
+      "sha256": "cce8ec951bae5786ecd733d43afc2be0cf6b2d24aaaf3513a40c67882fc9418e",
+      "reasons": [
+        "actual eval entry"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_mixed_stages/policy.py",
+      "repository_path": "experiments/model2_cbf_local25_mixed_stages/policy.py",
+      "bytes": 2053,
+      "sha256": "93d79bec92cbb083f5a7d114a7513d01cd377cd4461b005f7a3e7a02ae8029a8",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.model2_cbf_local25_mixed_stages.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_mixed_stages/run66.py",
+      "repository_path": "experiments/model2_cbf_local25_mixed_stages/run66.py",
+      "bytes": 14653,
+      "sha256": "7b1f8f9b8bb5326c2597595cc416f5296b5b06bca92868e38a73558b67e961d3",
+      "reasons": [
+        "batch validation/aggregation helper actually used"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_mixed_stages/runner.py",
+      "repository_path": "experiments/model2_cbf_local25_mixed_stages/runner.py",
+      "bytes": 2471,
+      "sha256": "6cfce60bf9db8363fe40bbe2ec2e3a31a32565ae085a22c3c7eabe325dfd4b7e",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.model2_cbf_local25_mixed_stages.runner"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_route_memory/__init__.py",
+      "repository_path": "experiments/model2_cbf_local25_route_memory/__init__.py",
+      "bytes": 69,
+      "sha256": "ed492ae05fa8cf9e0be7ba3a736605630733871229b4d9f4717a40c1b4ef11dc",
+      "reasons": [
+        "observed dynamic import: experiments.model2_cbf_local25_route_memory"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_route_memory/policy.py",
+      "repository_path": "experiments/model2_cbf_local25_route_memory/policy.py",
+      "bytes": 11526,
+      "sha256": "1c72e6d212c6002307f838c9ef0d27a51e4a5b215b9e73976ff99432bf611979",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/policy.py",
+        "observed dynamic import: experiments.model2_cbf_local25_route_memory.policy"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_route_memory/routes.py",
+      "repository_path": "experiments/model2_cbf_local25_route_memory/routes.py",
+      "bytes": 10598,
+      "sha256": "8921edc5313683a822f32f641771a92962c12f479ba8cf28c912d7c4b24a7dfb",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_route_memory/policy.py",
+        "observed dynamic import: experiments.model2_cbf_local25_route_memory.routes"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/model2_cbf_local25_route_memory/runner.py",
+      "repository_path": "experiments/model2_cbf_local25_route_memory/runner.py",
+      "bytes": 1120,
+      "sha256": "3cd2daa701415b05ba8496b48ee5ce1c3906f8f91b6b1f3075a12d4c8a98e24c",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/runner.py",
+        "observed dynamic import: experiments.model2_cbf_local25_route_memory.runner"
+      ]
+    },
+    {
+      "category": "project_code",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+      "repository_path": "experiments/nndm_dim24_model2_v63_eval/runner_core_stop10.py",
+      "bytes": 33381,
+      "sha256": "4e27d798e565d841e9deef59b1123ea2d9eeb362d1abbeaffe7d04899fedd9e3",
+      "reasons": [
+        "imported by experiments/model2_cbf_local25_mixed_stages/eval.py",
+        "observed dynamic import: experiments.nndm_dim24_model2_v63_eval.runner_core_stop10"
+      ]
+    },
+    {
+      "category": "provenance",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/progress.json",
+      "repository_path": "experiment/progress.json",
+      "bytes": 2236,
+      "sha256": "0e72627587100eaad5d412a6e5e4335d453a3a1a96df0f8c23c21c786e629258",
+      "reasons": [
+        "provenance"
+      ]
+    },
+    {
+      "category": "provenance",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/reuse_audit.json",
+      "repository_path": "experiment/reuse_audit.json",
+      "bytes": 12997,
+      "sha256": "4847825c50451917b6b649c4eef1a52421942f4185259b02282c4428d86e94f9",
+      "reasons": [
+        "provenance"
+      ]
+    },
+    {
+      "category": "result_summary",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/comparison_vs_previous.json",
+      "repository_path": "experiment/comparison_vs_previous.json",
+      "bytes": 25530,
+      "sha256": "1f428b1abf20fb11df4b86b615c53b1c008a22873194a7f1f4207f3ff5256436",
+      "reasons": [
+        "result_summary"
+      ]
+    },
+    {
+      "category": "result_summary",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/comparison_vs_previous.md",
+      "repository_path": "experiment/comparison_vs_previous.md",
+      "bytes": 3914,
+      "sha256": "c69fd0a0d7d973578182b7677a3ff46ca7082c7830c9a990471af58ca37bb509",
+      "reasons": [
+        "result_summary"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1041083166.json",
+      "repository_path": "scenarios/seed_1041083166.json",
+      "bytes": 2994,
+      "sha256": "c0797f13c0437dde74980e67c0d0880651ed2ee5e38a65f57741864a3640458e",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1131959911.json",
+      "repository_path": "scenarios/seed_1131959911.json",
+      "bytes": 2997,
+      "sha256": "c5bc5c486fe9fdf8500dd216d60b8232bcfa77eeb9af220c90ba8e6290743b7f",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_115985547.json",
+      "repository_path": "scenarios/seed_115985547.json",
+      "bytes": 2997,
+      "sha256": "ee0519350ab1e75de6cec11e80b7d80ed1c03ca03061d1c26b36769de243cd78",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1175287068.json",
+      "repository_path": "scenarios/seed_1175287068.json",
+      "bytes": 2990,
+      "sha256": "cb04349d77292253570a632d50912bd20e28025eb2e3225f9ab2dc6d8a29bb78",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1295743469.json",
+      "repository_path": "scenarios/seed_1295743469.json",
+      "bytes": 2996,
+      "sha256": "7bfa592aa93e7d1dcfc5a43b0cb549e51faf3c9fd8d86c36c55fc5eecd8f2056",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1303113791.json",
+      "repository_path": "scenarios/seed_1303113791.json",
+      "bytes": 3000,
+      "sha256": "9c09c108813a2c35de930a9797d3b68890621f41d28df2db70212ed65bf8e899",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1319308783.json",
+      "repository_path": "scenarios/seed_1319308783.json",
+      "bytes": 2996,
+      "sha256": "f50617bd25842d97624635ffb78a63d31cafb6145727c4f4cae1cad31de99806",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1337735547.json",
+      "repository_path": "scenarios/seed_1337735547.json",
+      "bytes": 2995,
+      "sha256": "65a5458152b3c12cb06fb937cd6c8ecd65d37d5313cf0e00c8bde74a9fe463ee",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1344181256.json",
+      "repository_path": "scenarios/seed_1344181256.json",
+      "bytes": 2993,
+      "sha256": "a428ff834d37e55f2fbbdb89ccedc54df459fc3a410cf7dc1d29b4e179ce24f8",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_137079570.json",
+      "repository_path": "scenarios/seed_137079570.json",
+      "bytes": 2993,
+      "sha256": "f9ae2b0f462045a289e358949d9660c8b3cfb9d6fda51f3c2273402ed02d7936",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1373672124.json",
+      "repository_path": "scenarios/seed_1373672124.json",
+      "bytes": 2994,
+      "sha256": "e2bc442970344fb9d490ac64e86175bd3d951f0e9f022d5dc8905aaa168c546c",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1419917087.json",
+      "repository_path": "scenarios/seed_1419917087.json",
+      "bytes": 2999,
+      "sha256": "ce24a94a1307f06046b5d16143cb5b5d0d050a4278f81cf97de88ba410d22c94",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1424418293.json",
+      "repository_path": "scenarios/seed_1424418293.json",
+      "bytes": 2994,
+      "sha256": "4178de4679a1b7b2f4765253857973bfd74217244dfd063ab11e053c52343422",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1487629675.json",
+      "repository_path": "scenarios/seed_1487629675.json",
+      "bytes": 2997,
+      "sha256": "7497c226b970c2776ed0a966822c43d1c42d645602479bbf3c445baefc56ba6e",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1505725293.json",
+      "repository_path": "scenarios/seed_1505725293.json",
+      "bytes": 2994,
+      "sha256": "28600cfd9d4d3792d34adf192cbf68cac3a491467860ff15ff71e9671cd26f7f",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1524623171.json",
+      "repository_path": "scenarios/seed_1524623171.json",
+      "bytes": 2996,
+      "sha256": "537e091508da3322e9433710a53062fd9c9de53dbcc438d468aa3aad1acfcf45",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1528120788.json",
+      "repository_path": "scenarios/seed_1528120788.json",
+      "bytes": 2997,
+      "sha256": "c5a4c9568d8df207307527d46c62ea0cb3ee9b09daee1899a40e01501b5e5e53",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1532647514.json",
+      "repository_path": "scenarios/seed_1532647514.json",
+      "bytes": 2999,
+      "sha256": "435391ae763edbad4e6b1be1205468c23e291ee03ccb2aca1adbcadd15f6da5c",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1544284046.json",
+      "repository_path": "scenarios/seed_1544284046.json",
+      "bytes": 2995,
+      "sha256": "1b7ee1830d935b39054c73ba30b7ba0e3401747b0fe765c628299c6117ba5d3d",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1670000248.json",
+      "repository_path": "scenarios/seed_1670000248.json",
+      "bytes": 2994,
+      "sha256": "cbe2fd538bbbaf1af47539007d49a4a7a8bad823a4f973eaa1ea3f83024c1c34",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1673420483.json",
+      "repository_path": "scenarios/seed_1673420483.json",
+      "bytes": 2998,
+      "sha256": "2c34dc758d8a9084bee940da72a03117d18924b3a8a5b1c44f3579cc5c0ebba9",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1733259484.json",
+      "repository_path": "scenarios/seed_1733259484.json",
+      "bytes": 2999,
+      "sha256": "d78c75eb6fb85ce98f1f93e06705b25e0bbe5128a999224d4c14a9e9fda529bb",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1738193931.json",
+      "repository_path": "scenarios/seed_1738193931.json",
+      "bytes": 2995,
+      "sha256": "2388b9567ed646fc12f9bac8d912617747059b3b5c146bb9208ff44239071431",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1772518337.json",
+      "repository_path": "scenarios/seed_1772518337.json",
+      "bytes": 2996,
+      "sha256": "51e03bd6ce501ae1e8bee874e49c08ee5450408b9a2f17d2a5b80d3af2465739",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1793481395.json",
+      "repository_path": "scenarios/seed_1793481395.json",
+      "bytes": 2997,
+      "sha256": "7d94f6932f7b370deb95516c5218f7162cfd8b2d2887bdf56e4427edf38b3e1a",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1810004900.json",
+      "repository_path": "scenarios/seed_1810004900.json",
+      "bytes": 3000,
+      "sha256": "8bff93d09f17073ee6816f59264239b8dc7e6e4b210e23f84ad24b71ebf9163a",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1849087796.json",
+      "repository_path": "scenarios/seed_1849087796.json",
+      "bytes": 3001,
+      "sha256": "c12eaf4e36beca28b3e87a17a678f8900c66fc42ab53cbdd01af5270badd3df5",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1857772030.json",
+      "repository_path": "scenarios/seed_1857772030.json",
+      "bytes": 2991,
+      "sha256": "6888965ecbd294e91be7614315dda042e2c2d69d2db8c1502b8e54ccada600e9",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1866707754.json",
+      "repository_path": "scenarios/seed_1866707754.json",
+      "bytes": 2996,
+      "sha256": "055e9d43d20221954db83bcfd80ebc9c7071972affb39b7a24e6db96d0640e75",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_18685189.json",
+      "repository_path": "scenarios/seed_18685189.json",
+      "bytes": 2994,
+      "sha256": "060d5ad54a5ffb7a6b0631bbdeb5c7a6555bea125372e8f10a7fa0c29f32bf93",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1879934180.json",
+      "repository_path": "scenarios/seed_1879934180.json",
+      "bytes": 2995,
+      "sha256": "3cf80fd8614b4ceb63b36a7d2366fbc6a79161fc439b3022ae6fe59aea7c88e7",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1891222525.json",
+      "repository_path": "scenarios/seed_1891222525.json",
+      "bytes": 2993,
+      "sha256": "568434d5eeb2249d748582ff2b80fa8f6155191b5847b9eb7b8689bfec24391a",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1898837579.json",
+      "repository_path": "scenarios/seed_1898837579.json",
+      "bytes": 3001,
+      "sha256": "0a24c5f28689398d33b126ea7b410f01662e1af17919a4c97507f7563ba9d95b",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1915220046.json",
+      "repository_path": "scenarios/seed_1915220046.json",
+      "bytes": 2995,
+      "sha256": "a43295757027de15eebc6a0c6ac6df7aa06c43030d57ecad06cb048ca9082ce3",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1921019152.json",
+      "repository_path": "scenarios/seed_1921019152.json",
+      "bytes": 2998,
+      "sha256": "9ef93cc0dcd5143b39340f40ccd1afd09822063fb09277feeafc958dd9c8a947",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_1948800791.json",
+      "repository_path": "scenarios/seed_1948800791.json",
+      "bytes": 2997,
+      "sha256": "095bf93c5d4f7c80c92c51b0396df47dbceeee15e4243d5d43e8053fb073c91a",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_20000022.json",
+      "repository_path": "scenarios/seed_20000022.json",
+      "bytes": 2994,
+      "sha256": "2fedf1bec9dea97b148b36f87eeb7cad38136cb8d02b13b7fcc0bf2f584bbb77",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_2061621831.json",
+      "repository_path": "scenarios/seed_2061621831.json",
+      "bytes": 2995,
+      "sha256": "5606c501ed8c100d66ffb7686867747abb712caf733109d69592027d752b0f86",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_2114184371.json",
+      "repository_path": "scenarios/seed_2114184371.json",
+      "bytes": 3000,
+      "sha256": "33d0fc981c15a4828ef0d775eacf0c86ddf59590eb67cdf4b413d13eec157eca",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_245421928.json",
+      "repository_path": "scenarios/seed_245421928.json",
+      "bytes": 2993,
+      "sha256": "b44662c95e785f349a37e79216ec29c6476379c2fd456632d4b73b1f8376a7ab",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_25793086.json",
+      "repository_path": "scenarios/seed_25793086.json",
+      "bytes": 2996,
+      "sha256": "2301242108dd41d55cd529e01fbef58ec213e8eb091825f6957c6f320de683ea",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_276109436.json",
+      "repository_path": "scenarios/seed_276109436.json",
+      "bytes": 2999,
+      "sha256": "e4d9f389e5cd47762dff73f5a281ad1a683390491d66093279f1ed604f85f268",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_376336367.json",
+      "repository_path": "scenarios/seed_376336367.json",
+      "bytes": 2991,
+      "sha256": "d504b79e730c018a25740f9b6ca6c657815c2cab1b87bce4d86d065234b74387",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_38070626.json",
+      "repository_path": "scenarios/seed_38070626.json",
+      "bytes": 2996,
+      "sha256": "1ea53f4397ceb60591a5aeaa8448e04e2e475ea289fa8f78fdfb7809e6de0950",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_394657593.json",
+      "repository_path": "scenarios/seed_394657593.json",
+      "bytes": 2995,
+      "sha256": "6b2eac47e10eaad2ac64d4199f18fb465b850013338622dd7b7152aef0d3b153",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_397946280.json",
+      "repository_path": "scenarios/seed_397946280.json",
+      "bytes": 2994,
+      "sha256": "5c30556941195f742759515a048a406dad308b503aadf728f2ca8f82723e3a19",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_438457735.json",
+      "repository_path": "scenarios/seed_438457735.json",
+      "bytes": 2994,
+      "sha256": "3d9102fe932631c25f379807036d5a4a828662c9fd8dd54757f6f2ee6fa627a3",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_452469155.json",
+      "repository_path": "scenarios/seed_452469155.json",
+      "bytes": 2991,
+      "sha256": "43cf95e821251939b3dc8e0220a185325ff3189f31a0d70c5ddd515ec119fae9",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_453988355.json",
+      "repository_path": "scenarios/seed_453988355.json",
+      "bytes": 2992,
+      "sha256": "eaacf8f6fe07feb1692e1fff8fe32b87be507a4b6f6cdd6a21f5ea5784eadf50",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_461133718.json",
+      "repository_path": "scenarios/seed_461133718.json",
+      "bytes": 2994,
+      "sha256": "ed77566239a7f23e947ffc8d4cb38235d88bd987a646ad0278e4c8ef650e3ba8",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_46807587.json",
+      "repository_path": "scenarios/seed_46807587.json",
+      "bytes": 2992,
+      "sha256": "f844679f9f522dcb4a60c054f65835808409cff39f1191f323f622947a5a8ef2",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_506543433.json",
+      "repository_path": "scenarios/seed_506543433.json",
+      "bytes": 2991,
+      "sha256": "dbabf55b2fc19287938f399817c8862b891b05aaad6b2dfbf3ec08b3b481026d",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_516533431.json",
+      "repository_path": "scenarios/seed_516533431.json",
+      "bytes": 2995,
+      "sha256": "e73e5d9c12f71ed45eb4fb7d5535d7b9bc403ce76ffff9093f1e185f525f0176",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_582597579.json",
+      "repository_path": "scenarios/seed_582597579.json",
+      "bytes": 2995,
+      "sha256": "feecfbc005168957d229c7123e588c8fbdc55c16fcd7e2bcd905e8310b337ae9",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_589211402.json",
+      "repository_path": "scenarios/seed_589211402.json",
+      "bytes": 2997,
+      "sha256": "61a22c3e1040234567140f6ce34487068e77de532295f0d1fe0424143a81b485",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_605147828.json",
+      "repository_path": "scenarios/seed_605147828.json",
+      "bytes": 2996,
+      "sha256": "389abc6fd2e0abe4a90568e84623c635ce849b01ac151600c78f20bdf0146129",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_647631320.json",
+      "repository_path": "scenarios/seed_647631320.json",
+      "bytes": 2996,
+      "sha256": "f02ca08c19bf3515ca48e092f2aaf544f3c25a99ca2c6719571b86900fb41586",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_684952848.json",
+      "repository_path": "scenarios/seed_684952848.json",
+      "bytes": 2995,
+      "sha256": "727a0e61a1b23a5ce155df7eaa8100cedc9d2441562f4f5477d1b5e093d6bcc6",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_721779023.json",
+      "repository_path": "scenarios/seed_721779023.json",
+      "bytes": 2995,
+      "sha256": "6eecd3b2c8ff993be580fb3f508c27dd0b1ddaa3b06bbe4464fd7fcfd1bab75d",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_791545074.json",
+      "repository_path": "scenarios/seed_791545074.json",
+      "bytes": 2992,
+      "sha256": "553833e3169176c2cc2eddc834151ec05f23afefe1e11dc8ad9d9c2c7758683f",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_810178128.json",
+      "repository_path": "scenarios/seed_810178128.json",
+      "bytes": 2992,
+      "sha256": "a20b4702cc5bc4b6eb7113e1041122d59d8e201cb7718f2e3bccc6aa7437fc0c",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_825929573.json",
+      "repository_path": "scenarios/seed_825929573.json",
+      "bytes": 2995,
+      "sha256": "5be242eef72eb7023f3e9a5c99e82e138e8d876fa844224a290a66e58ea0577f",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_923571703.json",
+      "repository_path": "scenarios/seed_923571703.json",
+      "bytes": 2998,
+      "sha256": "18e1bac53a89032c8c919e7c3d64aab13710ee6dbdf22a54041d003ab3caebd7",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_948040208.json",
+      "repository_path": "scenarios/seed_948040208.json",
+      "bytes": 2992,
+      "sha256": "d11ce168b0f16463a189994546cac1ee3543353ebea2099171ba62f8c830baf3",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_952948542.json",
+      "repository_path": "scenarios/seed_952948542.json",
+      "bytes": 2997,
+      "sha256": "566f9b5010d6e80d296b72d8245f1c40675f14e64e31d53898c9759cb8997d4e",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    },
+    {
+      "category": "scenario_manifest",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/data/eval/10.31_59px+有界软约束/manifests/seed_969453231.json",
+      "repository_path": "scenarios/seed_969453231.json",
+      "bytes": 2998,
+      "sha256": "5c0a49f64c9d678a9cee426bd88abf7af11fe9fcde9c9130868116d6f1689cb7",
+      "reasons": [
+        "exact initial state from this66-scene evaluation"
+      ]
+    }
+  ],
+  "ignored_nonruntime_imports": [
+    {
+      "module": "diffusion_policy.environment.push_t_env",
+      "source": "/home/cps/czt/2026_summer/0928_lowdim/eval_lowdim_0.8964/diffusion_policy/env/pusht/pymunk_keypoint_manager.py",
+      "function": "test",
+      "reason": "Legacy demonstration function is not called by this evaluation; not a missing runtime dependency."
+    }
+  ],
+  "source_only_import_check": {
+    "passed": true,
+    "observed_project_modules": 60,
+    "external_project_fallbacks": [],
+    "scope": "entry/workspace/model classes imported; no evaluation, training, solver or model instance"
+  }
+}

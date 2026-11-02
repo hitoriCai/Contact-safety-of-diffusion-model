@@ -1,0 +1,168 @@
+proposed_repository/
+├── checkpoints/
+│   ├── model1_epoch0600.ckpt
+│   ├── model2_v6_3_epoch0500.ckpt
+│   └── nndm_dim24.pth
+├── diffusion_policy/
+│   ├── common/
+│   │   ├── json_logger.py
+│   │   ├── pytorch_util.py
+│   │   └── timestamp_accumulator.py
+│   ├── dataset/
+│   │   └── base_dataset.py
+│   ├── env/
+│   │   └── pusht/
+│   │       ├── __init__.py
+│   │       ├── pusht_env.py
+│   │       ├── pusht_keypoints_env.py
+│   │       ├── pymunk_keypoint_manager.py
+│   │       └── pymunk_override.py
+│   ├── env_runner/
+│   │   └── base_lowdim_runner.py
+│   ├── gym_util/
+│   │   ├── async_vector_env.py
+│   │   ├── multistep_wrapper.py
+│   │   └── video_recording_wrapper.py
+│   ├── model/
+│   │   ├── common/
+│   │   │   ├── dict_of_tensor_mixin.py
+│   │   │   ├── lr_scheduler.py
+│   │   │   ├── module_attr_mixin.py
+│   │   │   └── normalizer.py
+│   │   └── diffusion/
+│   │       ├── conditional_unet1d.py
+│   │       ├── conv1d_components.py
+│   │       ├── mask_generator.py
+│   │       └── positional_embedding.py
+│   ├── policy/
+│   │   ├── base_lowdim_policy.py
+│   │   ├── diffusion_unet_lowdim_policy.py
+│   │   ├── diffusion_unet_lowdim_policy_origin.py
+│   │   ├── diffusion_unet_lowdim_policy_regrasp.py
+│   │   └── mind.py
+│   ├── real_world/
+│   │   └── video_recorder.py
+│   └── workspace/
+│       ├── base_workspace.py
+│       └── train_diffusion_unet_lowdim_workspace.py
+├── experiment/
+│   ├── comparison_vs_previous.json
+│   ├── comparison_vs_previous.md
+│   ├── experiment_config.json
+│   ├── progress.json
+│   └── reuse_audit.json
+├── experiments/
+│   ├── contact_gap_5s/
+│   │   ├── __init__.py
+│   │   ├── contact_env.py
+│   │   ├── contact_wrapper.py
+│   │   ├── policy_contact_gap.py
+│   │   └── runner_contact_gap.py
+│   ├── model2_cbf_diverse_hard/
+│   │   └── policy.py
+│   ├── model2_cbf_diverse_hard_infeasible_regrasp/
+│   │   ├── __init__.py
+│   │   ├── policy.py
+│   │   └── runner.py
+│   ├── model2_cbf_diverse_v2/
+│   │   ├── policy.py
+│   │   └── runner.py
+│   ├── model2_cbf_full_page/
+│   │   ├── __init__.py
+│   │   ├── filter.py
+│   │   └── policy.py
+│   ├── model2_cbf_full_page_1step_p047/
+│   │   ├── __init__.py
+│   │   └── policy.py
+│   ├── model2_cbf_global_then_clip/
+│   │   ├── __init__.py
+│   │   ├── filter.py
+│   │   └── policy.py
+│   ├── model2_cbf_local25_dedup/
+│   │   ├── __init__.py
+│   │   └── policy.py
+│   ├── model2_cbf_local25_mixed_stages/
+│   │   ├── __init__.py
+│   │   ├── eval.py
+│   │   ├── policy.py
+│   │   ├── run66.py
+│   │   └── runner.py
+│   ├── model2_cbf_local25_route_memory/
+│   │   ├── __init__.py
+│   │   ├── policy.py
+│   │   ├── routes.py
+│   │   └── runner.py
+│   ├── nndm_dim24_model2_v63_eval/
+│   │   └── runner_core_stop10.py
+│   └── __init__.py
+├── scenarios/
+│   ├── seed_1041083166.json
+│   ├── seed_1131959911.json
+│   ├── seed_115985547.json
+│   ├── seed_1175287068.json
+│   ├── seed_1295743469.json
+│   ├── seed_1303113791.json
+│   ├── seed_1319308783.json
+│   ├── seed_1337735547.json
+│   ├── seed_1344181256.json
+│   ├── seed_137079570.json
+│   ├── seed_1373672124.json
+│   ├── seed_1419917087.json
+│   ├── seed_1424418293.json
+│   ├── seed_1487629675.json
+│   ├── seed_1505725293.json
+│   ├── seed_1524623171.json
+│   ├── seed_1528120788.json
+│   ├── seed_1532647514.json
+│   ├── seed_1544284046.json
+│   ├── seed_1670000248.json
+│   ├── seed_1673420483.json
+│   ├── seed_1733259484.json
+│   ├── seed_1738193931.json
+│   ├── seed_1772518337.json
+│   ├── seed_1793481395.json
+│   ├── seed_1810004900.json
+│   ├── seed_1849087796.json
+│   ├── seed_1857772030.json
+│   ├── seed_1866707754.json
+│   ├── seed_18685189.json
+│   ├── seed_1879934180.json
+│   ├── seed_1891222525.json
+│   ├── seed_1898837579.json
+│   ├── seed_1915220046.json
+│   ├── seed_1921019152.json
+│   ├── seed_1948800791.json
+│   ├── seed_20000022.json
+│   ├── seed_2061621831.json
+│   ├── seed_2114184371.json
+│   ├── seed_245421928.json
+│   ├── seed_25793086.json
+│   ├── seed_276109436.json
+│   ├── seed_376336367.json
+│   ├── seed_38070626.json
+│   ├── seed_394657593.json
+│   ├── seed_397946280.json
+│   ├── seed_438457735.json
+│   ├── seed_452469155.json
+│   ├── seed_453988355.json
+│   ├── seed_461133718.json
+│   ├── seed_46807587.json
+│   ├── seed_506543433.json
+│   ├── seed_516533431.json
+│   ├── seed_582597579.json
+│   ├── seed_589211402.json
+│   ├── seed_605147828.json
+│   ├── seed_647631320.json
+│   ├── seed_684952848.json
+│   ├── seed_721779023.json
+│   ├── seed_791545074.json
+│   ├── seed_810178128.json
+│   ├── seed_825929573.json
+│   ├── seed_923571703.json
+│   ├── seed_948040208.json
+│   ├── seed_952948542.json
+│   └── seed_969453231.json
+├── scripts/
+│   └── run66_r57r59_reuse10_20261031.py
+├── eval.py
+└── setup.py

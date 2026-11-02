@@ -1,0 +1,434 @@
+{
+  "model1": {
+    "config": {
+      "name": "train_diffusion_unet_lowdim",
+      "_target_": "diffusion_policy.workspace.train_diffusion_unet_lowdim_workspace.TrainDiffusionUnetLowdimWorkspace",
+      "obs_dim": 20,
+      "action_dim": 2,
+      "keypoint_dim": 2,
+      "task_name": "pusht_lowdim",
+      "exp_name": "film200_action4_e600",
+      "horizon": 16,
+      "n_obs_steps": 2,
+      "n_action_steps": 4,
+      "n_latency_steps": 0,
+      "past_action_visible": false,
+      "keypoint_visible_rate": 1.0,
+      "obs_as_local_cond": false,
+      "obs_as_global_cond": true,
+      "pred_action_steps_only": false,
+      "policy": {
+        "_target_": "diffusion_policy.policy.diffusion_unet_lowdim_policy_origin.OriginDiffusionUnetLowdimPolicy",
+        "model": {
+          "_target_": "diffusion_policy.model.diffusion.conditional_unet1d.ConditionalUnet1D",
+          "input_dim": 2,
+          "local_cond_dim": null,
+          "global_cond_dim": 40,
+          "diffusion_step_embed_dim": 256,
+          "down_dims": [
+            256,
+            512,
+            1024
+          ],
+          "kernel_size": 5,
+          "n_groups": 8,
+          "cond_predict_scale": true
+        },
+        "noise_scheduler": {
+          "_target_": "diffusers.schedulers.scheduling_ddpm.DDPMScheduler",
+          "num_train_timesteps": 100,
+          "beta_start": 0.0001,
+          "beta_end": 0.02,
+          "beta_schedule": "squaredcos_cap_v2",
+          "variance_type": "fixed_small",
+          "clip_sample": true,
+          "prediction_type": "epsilon"
+        },
+        "horizon": 16,
+        "obs_dim": 20,
+        "action_dim": 2,
+        "n_action_steps": 4,
+        "n_obs_steps": 2,
+        "num_inference_steps": 100,
+        "obs_as_local_cond": false,
+        "obs_as_global_cond": true,
+        "pred_action_steps_only": false,
+        "oa_step_convention": true,
+        "mind": {
+          "enabled": false
+        }
+      },
+      "task": {
+        "env_runner": {
+          "pass_obstacles_to_policy": false,
+          "_target_": "diffusion_policy.env_runner.pusht_keypoints_runner.PushTKeypointsRunner",
+          "keypoint_visible_rate": 1.0,
+          "n_train": 6,
+          "n_train_vis": 2,
+          "train_start_seed": 0,
+          "n_test": 50,
+          "n_test_vis": 20,
+          "legacy_test": true,
+          "test_start_seed": 100000,
+          "max_steps": 300,
+          "n_obs_steps": 2,
+          "n_action_steps": 4,
+          "n_latency_steps": 0,
+          "fps": 10,
+          "agent_keypoints": false,
+          "past_action": false,
+          "n_envs": null
+        },
+        "name": "pusht_lowdim",
+        "obs_dim": 20,
+        "action_dim": 2,
+        "keypoint_dim": 2,
+        "dataset": {
+          "_target_": "diffusion_policy.dataset.pusht_dataset.PushTLowdimDataset",
+          "zarr_path": "data/pusht/pusht_cchi_v7_replay.zarr",
+          "horizon": 16,
+          "pad_before": 1,
+          "pad_after": 3,
+          "seed": 42,
+          "val_ratio": 0.02,
+          "max_train_episodes": 200
+        }
+      },
+      "ema": {
+        "_target_": "diffusion_policy.model.diffusion.ema_model.EMAModel",
+        "update_after_step": 0,
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "min_value": 0.0,
+        "max_value": 0.9999
+      },
+      "dataloader": {
+        "batch_size": 256,
+        "num_workers": 1,
+        "shuffle": true,
+        "pin_memory": true,
+        "persistent_workers": false
+      },
+      "val_dataloader": {
+        "batch_size": 256,
+        "num_workers": 1,
+        "shuffle": false,
+        "pin_memory": true,
+        "persistent_workers": false
+      },
+      "optimizer": {
+        "_target_": "torch.optim.AdamW",
+        "lr": 0.0001,
+        "betas": [
+          0.95,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1e-06
+      },
+      "training": {
+        "device": "cuda:0",
+        "seed": 42,
+        "debug": false,
+        "resume": false,
+        "lr_scheduler": "cosine",
+        "lr_warmup_steps": 500,
+        "num_epochs": 600,
+        "gradient_accumulate_every": 1,
+        "use_ema": true,
+        "rollout_every": 50,
+        "checkpoint_every": 50,
+        "val_every": 1,
+        "sample_every": 5,
+        "max_train_steps": null,
+        "max_val_steps": null,
+        "tqdm_interval_sec": 1.0,
+        "rollout_with_mind": false
+      },
+      "logging": {
+        "project": "diffusion_policy_debug",
+        "resume": true,
+        "mode": "online",
+        "name": "2026.08.28-00.43.47_train_diffusion_unet_lowdim_pusht_lowdim",
+        "tags": [
+          "train_diffusion_unet_lowdim",
+          "pusht_lowdim",
+          "default"
+        ],
+        "id": null,
+        "group": null
+      },
+      "checkpoint": {
+        "topk": {
+          "monitor_key": "test_mean_score",
+          "mode": "max",
+          "k": 5,
+          "format_str": "epoch={epoch:04d}-test_mean_score={test_mean_score:.3f}.ckpt"
+        },
+        "save_last_ckpt": true,
+        "save_last_snapshot": false
+      },
+      "multi_run": {
+        "run_dir": "data/outputs/2026.08.28/00.43.47_train_diffusion_unet_lowdim_pusht_lowdim",
+        "wandb_name_base": "2026.08.28-00.43.47_train_diffusion_unet_lowdim_pusht_lowdim"
+      }
+    },
+    "targets": [
+      {
+        "location": "",
+        "target": "diffusion_policy.workspace.train_diffusion_unet_lowdim_workspace.TrainDiffusionUnetLowdimWorkspace"
+      },
+      {
+        "location": "policy",
+        "target": "diffusion_policy.policy.diffusion_unet_lowdim_policy_origin.OriginDiffusionUnetLowdimPolicy"
+      },
+      {
+        "location": "policy.model",
+        "target": "diffusion_policy.model.diffusion.conditional_unet1d.ConditionalUnet1D"
+      },
+      {
+        "location": "policy.noise_scheduler",
+        "target": "diffusers.schedulers.scheduling_ddpm.DDPMScheduler"
+      },
+      {
+        "location": "task.env_runner",
+        "target": "diffusion_policy.env_runner.pusht_keypoints_runner.PushTKeypointsRunner"
+      },
+      {
+        "location": "task.dataset",
+        "target": "diffusion_policy.dataset.pusht_dataset.PushTLowdimDataset"
+      },
+      {
+        "location": "ema",
+        "target": "diffusion_policy.model.diffusion.ema_model.EMAModel"
+      },
+      {
+        "location": "optimizer",
+        "target": "torch.optim.AdamW"
+      }
+    ],
+    "state_dict_names": [
+      "model",
+      "ema_model",
+      "optimizer"
+    ]
+  },
+  "model2_v6_3_epoch500": {
+    "config": {
+      "name": "train_diffusion_unet_lowdim_escape",
+      "_target_": "diffusion_policy.workspace.train_diffusion_unet_lowdim_workspace.TrainDiffusionUnetLowdimWorkspace",
+      "obs_dim": "${task.obs_dim}",
+      "action_dim": "${task.action_dim}",
+      "keypoint_dim": "${task.keypoint_dim}",
+      "task_name": "${task.name}",
+      "exp_name": "model2_v6_3_vanilla_paired_seed43",
+      "horizon": 16,
+      "n_obs_steps": 2,
+      "n_action_steps": 8,
+      "n_latency_steps": 0,
+      "past_action_visible": false,
+      "keypoint_visible_rate": 1.0,
+      "obs_as_local_cond": false,
+      "obs_as_global_cond": true,
+      "pred_action_steps_only": false,
+      "policy": {
+        "_target_": "diffusion_policy.policy.diffusion_unet_lowdim_policy_origin.OriginDiffusionUnetLowdimPolicy",
+        "model": {
+          "_target_": "diffusion_policy.model.diffusion.conditional_unet1d.ConditionalUnet1D",
+          "input_dim": "${eval: ${task.action_dim} if ${obs_as_local_cond} or ${obs_as_global_cond} else ${task.obs_dim} + ${task.action_dim}}",
+          "local_cond_dim": "${eval: ${task.obs_dim} if ${obs_as_local_cond} else None}",
+          "global_cond_dim": "${eval: ${task.obs_dim}*${n_obs_steps} if ${obs_as_global_cond} else None}",
+          "diffusion_step_embed_dim": 256,
+          "down_dims": [
+            256,
+            512,
+            1024
+          ],
+          "kernel_size": 5,
+          "n_groups": 8,
+          "cond_predict_scale": true
+        },
+        "noise_scheduler": {
+          "_target_": "diffusers.schedulers.scheduling_ddpm.DDPMScheduler",
+          "num_train_timesteps": 100,
+          "beta_start": 0.0001,
+          "beta_end": 0.02,
+          "beta_schedule": "squaredcos_cap_v2",
+          "variance_type": "fixed_small",
+          "clip_sample": true,
+          "prediction_type": "epsilon"
+        },
+        "horizon": "${horizon}",
+        "obs_dim": "${obs_dim}",
+        "action_dim": "${action_dim}",
+        "n_action_steps": "${eval:'${n_action_steps}+${n_latency_steps}'}",
+        "n_obs_steps": "${n_obs_steps}",
+        "num_inference_steps": 100,
+        "obs_as_local_cond": "${obs_as_local_cond}",
+        "obs_as_global_cond": "${obs_as_global_cond}",
+        "pred_action_steps_only": "${pred_action_steps_only}",
+        "oa_step_convention": true
+      },
+      "ema": {
+        "_target_": "diffusion_policy.model.diffusion.ema_model.EMAModel",
+        "update_after_step": 0,
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "min_value": 0.0,
+        "max_value": 0.9999
+      },
+      "dataloader": {
+        "batch_size": 256,
+        "num_workers": 1,
+        "shuffle": true,
+        "pin_memory": true,
+        "persistent_workers": false
+      },
+      "val_dataloader": {
+        "batch_size": 256,
+        "num_workers": 1,
+        "shuffle": false,
+        "pin_memory": true,
+        "persistent_workers": false
+      },
+      "optimizer": {
+        "_target_": "torch.optim.AdamW",
+        "lr": 0.0001,
+        "betas": [
+          0.95,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 1e-06
+      },
+      "training": {
+        "device": "cuda:0",
+        "seed": 43,
+        "debug": false,
+        "resume": true,
+        "lr_scheduler": "cosine",
+        "lr_warmup_steps": 500,
+        "num_epochs": 501,
+        "gradient_accumulate_every": 1,
+        "use_ema": true,
+        "rollout_every": 50,
+        "checkpoint_every": 50,
+        "val_every": 1,
+        "sample_every": 5,
+        "max_train_steps": null,
+        "max_val_steps": null,
+        "tqdm_interval_sec": 1.0
+      },
+      "logging": {
+        "project": "diffusion_policy_debug",
+        "resume": true,
+        "mode": "online",
+        "name": "${now:%Y.%m.%d-%H.%M.%S}_${name}_${task_name}",
+        "tags": [
+          "${name}",
+          "${task_name}",
+          "${exp_name}"
+        ],
+        "id": null,
+        "group": null
+      },
+      "checkpoint": {
+        "topk": {
+          "monitor_key": "test_mean_score",
+          "mode": "max",
+          "k": 5,
+          "format_str": "epoch={epoch:04d}-test_mean_score={test_mean_score:.3f}.ckpt"
+        },
+        "keep_last": 5,
+        "save_last_ckpt": true,
+        "save_last_snapshot": false
+      },
+      "multi_run": {
+        "run_dir": "data/outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}_${name}_${task_name}",
+        "wandb_name_base": "${now:%Y.%m.%d-%H.%M.%S}_${name}_${task_name}"
+      },
+      "defaults": [
+        "_self_",
+        {
+          "task": "pusht_escape_lowdim"
+        }
+      ],
+      "hydra": {
+        "job": {
+          "override_dirname": "${name}"
+        },
+        "run": {
+          "dir": "data/outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}_${name}_${task_name}"
+        },
+        "sweep": {
+          "dir": "data/outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}_${name}_${task_name}",
+          "subdir": "${hydra.job.num}"
+        }
+      },
+      "task": {
+        "name": "pusht_escape_lowdim",
+        "obs_dim": 23,
+        "action_dim": 2,
+        "keypoint_dim": 2,
+        "env_runner": {
+          "_target_": "diffusion_policy.env_runner.pusht_escape_runner.PushTEscapeRunner",
+          "manifest_path": "diffusion_policy/config/eval_seed_sets/pusht_escape_corner_test_unseen_v1_16.json",
+          "n_test": 8,
+          "n_test_vis": 8,
+          "min_steps": 80,
+          "max_steps": 160,
+          "n_obs_steps": "${n_obs_steps}",
+          "n_action_steps": "${n_action_steps}",
+          "fps": 10,
+          "render_size": 256,
+          "escape_clearance": 100.0,
+          "escape_displacement": 45.0,
+          "seed_offset": 0
+        },
+        "dataset": {
+          "loader": "experiment.Windows",
+          "npz_path": "/home/cps/czt/2026_summer/model2_v6_3_vanilla_seed43_20261019/data/multiroute200.npz",
+          "split_path": "/home/cps/czt/2026_summer/model2_v6_3_vanilla_seed43_20261019/data/split.json",
+          "subset": "train",
+          "sampling": "uniform scenes and four routes"
+        }
+      }
+    },
+    "targets": [
+      {
+        "location": "",
+        "target": "diffusion_policy.workspace.train_diffusion_unet_lowdim_workspace.TrainDiffusionUnetLowdimWorkspace"
+      },
+      {
+        "location": "policy",
+        "target": "diffusion_policy.policy.diffusion_unet_lowdim_policy_origin.OriginDiffusionUnetLowdimPolicy"
+      },
+      {
+        "location": "policy.model",
+        "target": "diffusion_policy.model.diffusion.conditional_unet1d.ConditionalUnet1D"
+      },
+      {
+        "location": "policy.noise_scheduler",
+        "target": "diffusers.schedulers.scheduling_ddpm.DDPMScheduler"
+      },
+      {
+        "location": "ema",
+        "target": "diffusion_policy.model.diffusion.ema_model.EMAModel"
+      },
+      {
+        "location": "optimizer",
+        "target": "torch.optim.AdamW"
+      },
+      {
+        "location": "task.env_runner",
+        "target": "diffusion_policy.env_runner.pusht_escape_runner.PushTEscapeRunner"
+      }
+    ],
+    "state_dict_names": [
+      "ema_model",
+      "model",
+      "optimizer",
+      "lr_scheduler"
+    ]
+  }
+}

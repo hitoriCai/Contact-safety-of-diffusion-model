@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "observed_project_modules": 60,
+  "external_project_fallbacks": [],
+  "scope": "entry/workspace/model classes imported; no evaluation, training, solver or model instance"
+}

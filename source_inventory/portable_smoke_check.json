@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "seed": 376336367,
+  "steps": 3,
+  "device": "cuda:0",
+  "scope": "Short check after relocating source files and checkpoint paths; not a full evaluation result",
+  "effective_profile_check": "model1 r57 hard tracking1; model2 r59 soft cap300 tracking40"
+}
